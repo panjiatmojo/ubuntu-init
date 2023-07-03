@@ -10,7 +10,7 @@ fi
 read -p 'Slave Root Username (default root): ' remote_username
 if [ -z "${remote_username}" ]; then
     remote_username=root
-    echo "# Set username as root
+    echo "# Set username as root"
 fi
 
 echo "# Copying ssh key to remote server"

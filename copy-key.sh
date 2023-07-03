@@ -13,4 +13,4 @@ if [ -z "${remote_username}" ]; then
     exit
 fi
 
-scp -r /home/jenkins/.ssh ${remote_user}@${remote_hostname}:/home/jenkins/.ssh 
+scp -r /home/jenkins/.ssh ${remote_user}@${remote_hostname}:/home/jenkins/

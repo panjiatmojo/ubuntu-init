@@ -13,4 +13,8 @@ if [ -z "${remote_username}" ]; then
     exit
 fi
 
-scp -r /home/jenkins/.ssh ${remote_user}@${remote_hostname}:/home/jenkins/
+echo "# Copying ssh key to remote server\n"
+scp -r /home/jenkins/.ssh ${remote_user}@${remote_hostname}:/home/jenkins/ && \
+
+echo "# Chane ssh key ownership on remote server\n"
+ssh ${remote_user}@${remote_hostname} 'bash -s' < "./change-ownership.sh"

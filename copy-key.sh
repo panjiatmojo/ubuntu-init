@@ -1,5 +1,8 @@
 #!/bin/bash
 
+unset remote_hostname
+unset remote_username
+
 echo "Copy Jenkins SSH Key to other Slave Node" 
 read -p 'Slave Hostname: ' remote_hostname
 if [ -z "${remote_hostname}" ]; then
